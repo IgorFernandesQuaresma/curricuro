@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Kumbh+Sans:wght@300;500;600&family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <nav class = "header__nav">
+            <img class= "logo" src="./imagens/logo (2).png" alt="Logo do Site">
+            <ul>
+                <li><a class="header__nav__item" href="#aboutMe">Sobre Mim</a></li>
+                <li><a class="header__nav__item" href="#experiencias">Experiências</a></li>
+                <li><a class="header__nav__item" href="#tecnologias">Habilidades</a></li>
+                <li><a class="header__nav__item" href="#btn-agendar">Contato</a></li>
+            </ul>
+        </nav>
+        <section id="home">
+
+            <div class="textos-home">
+                <h1>Estou muito feliz em tê-lo aqui<span> irei adorar agregar a sua equipe</span></h1>
+                <button id="btn-agendar" class="btn-main">Agende uma entrevista comigo</button>
+            </div>
+        </section>
+    </header>
+    
+    <main class="main">
+
+        <section class="aboutMe">
+            <img src="./imagens/aboutMe2.png" alt="boneco about me">
+            <div class="aboutMe__sobreMim">
+                <h1 id="aboutMe" class = "aboutMe__sobreMim__titulo">Quem sou eu</h1>
+                <p class = "aboutMe__sobreMim__paragrafo">Olá! Sou Igor Fernandes Quaresma, 28 anos, nutricionista em transição para o universo do desenvolvimento web. 
+                    
+                    <br> Apaixonado por JavaScript, TypeScript, Jquery e React, venho construindo projetos em WordPress nos últimos três anos para agencias de publicidade e desenvolvendo minhas habilidades.
+
+                    <br> Em busca de novos desafios, estou direcionando minha energia para integrar a equipe de vocês
+                     
+                    Sou ambicioso e quero me desenvolver como profissional na área de desenvolvimento web e acredito que podemos fazer a simbioze perfeita.
+                </p>
+            </div>
+        </section>
+
+        <section id = "experiencias" class="experiencias">
+           
+            <h1>Experiências</h1>
+
+            <ul class="experiencias__ul">
+                <!-- <li class="experiencias__ul__li"> 
+                <div class="experiencias__div">
+                    
+                    <h2 class="experiencias__cargo"> Cargo: Web Designer Jr</h2>
+                    <h2 class="experiencias__empresa">Agencia V4 - Company/ Cruz e Souza </h2>
+                    <p class="experiencias__descricao">Entregas de landing pages sob demanda, 
+                        taggeamento das mesmas com as ferramentas de trafego. 
+                        Ferramentas Utilizadas: Figma, wordpress e elementor, HTML 5, CSS 3, JavaScript
+                    </p>
+                <div class="experiencias__btn__bloco">
+                    <button id="btn-editar__exp" class="btn-main">Editar</button>
+                    <button id="btn-editar__exp" class="btn-main">Remover</button>
+                </div>
+                </div>
+                </li> -->
+            </ul>
+        </section>
+
+        <section id = "tecnologias" class="tecnologias">
+            <h1 class="tecnologias__titulo">Tecnologias proeficientes</h1>
+            <ul class="tecnologias__lista__svg">
+            <div class="tecnologias__lista__container">
+                <li><img src="./SVG/1.svg" alt="Figma"></li>
+                <li><img src="./SVG/2.svg" alt="wordpress"></li>
+                <li><img src="./SVG/3.svg" alt="elementor"></li>
+                <li><img src="./SVG/4.svg" alt="CSS 3"></li>
+                <li><img src="./SVG/5.svg" alt="HTML 5"></li>
+                <li><img src="./SVG/6.svg" alt="JavaScript"></li>
+                <li><img src="./SVG/7.svg" alt="React"></li>
+            </div>
+              </ul>
+        </section>
+
+        <section class="formacao">
+            <h1 class="formacao__titulo">Formação</h1>
+            <ul class="formacao__ul">
+            <div class="formacao__container">
+               <!-- <li class="formacao__li">
+                    <h2>
+                    Curso: Desenvolvimento Web - Front End: Js
+                    </h2>
+                    <h2>
+                    Escola: Senac - Jundiai
+                    </h2>
+                    <h2>
+                    Data de termino: 2023
+                    </h2>
+                    <p>
+                        Curso profissionalizante focado em full stack
+                    </p>     
+                </li> -->
+            </div>
+        </ul>
+
+            <div class="pontosExtras">
+                <h2>Pontos Extras</h2>
+                <p>
+                    Este curriculo foi desenvolvido usando tecnologias de front end.
+                    Como Sass para organizar o Css, HTML, JavaScript, todo o desingn foi feito por mim, inclusive o banner do header.
+                    <strong>caso queira testar as funcionalizades dos botões de editar e o formulario para add novas experiencias ele esta funcionando.
+                        Porém teus dados ficarao salvos em seu local storage, assim que você limpá-lo os dados voltarão a ser os iniciais.
+                    </strong>
+
+                    Fico feliz que você chegou ate aqui, se quiser marcar uma reunião estou disponivel no botão abaixo
+                </p>
+                <button class="btn-main">Agende uma entrevista comigo</button>
+            </div>
+              
+        </section>
+
+    </main>
+        
+
+    <footer>
+        <p>Desenvolvido por Igor Fernandes para ser um curriculo</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+@use '../abstract/variaveis';
+
+
+header {
+    background-image: url(../imagens/bannerPrincipal.png);
+    background-position-x: 60% ;
+    background-position-y: -210px;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    width: auto;
+    height: 835px;
+  
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+
+        img {
+            width: 300px;
+            height: 120px;
+            margin-bottom: -50px;
+        }
+
+        ul {
+            display: inline-flex;
+            gap: 2rem;
+            list-style: none;
+
+            li {
+                margin: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: variaveis.$cor-quintenaria-branco;
+                font-weight: 500;
+                font-family: variaveis.$ft-titulos;
+
+                &:hover {
+                    color: variaveis.$cor-secundaria-rosa;
+                }
+            }
+        }
+
+
+        @media screen and (min-width: 700px) and (max-width: 1100px) { // Estilo para tablets
+            img {
+                width: 200px;
+                margin-bottom: -30px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+
+                li {
+                    margin: 0;
+                }
+            }
+        }
+
+        @media screen and (min-width: 375px) and (max-width: 700px) { // Estilo para celulares
+           
+            height: auto;
+            
+
+            img {
+                width: 173px;
+                margin-bottom: -20px;
+            }
+
+            ul {
+                display: flex;
+                padding: 0;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                
+
+                li {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    #home {
+        max-width: 1040px;
+        width: 60%;
+        margin: 0 auto;
+        
+      
+        .textos-home {
+
+            margin-top: 150px;
+            margin-right: 200px;
+            align-content: start;
+            
+
+
+            h1 {
+                font-size: 42px;
+                font-family: variaveis.$ft-titulos;
+                font-weight: 800;
+                color: variaveis.$cor-quintenaria-branco;
+            }
+            span {
+                color: variaveis.$cor-secundaria-rosa;
+                font-size: 45px;
+                font-family: variaveis.$ft-textos;
+                font-weight: 900;
+            }
+            
+            .btn-main {
+
+                background-color: transparent; 
+                color: variaveis.$cor-secundaria-rosa; 
+                border: 2px solid variaveis.$cor-secundaria-rosa; 
+                padding: 10px 20px; 
+                font-size: 18px;
+                font-weight: 400;
+                font-family: variaveis.$ft-textos;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            .btn-main:hover {
+
+                background-color: transparent; 
+                color: variaveis.$cor-quintenaria-branco; 
+                border: 2px solid variaveis.$cor-quintenaria-branco
+            }
+        }
+    }
+
+    @media screen and (min-width: 700px) and (max-width: 1100px) {
+        #home {
+
+            width: 100%;
+
+            .textos-home {
+
+                margin-top: 150px;
+                margin-right: 200px;
+                align-content: start;
+
+                h1 {
+                    font-size: 25px;
+                }
+                span{
+                    font-size: 25px;
+                }
+
+                .btn-main {
+                    width: 300px;
+                    font-size: 15px;
+                }
+            }
+
+        }
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 700px) {
+        #home {
+
+            width: 100%;
+
+            .textos-home {
+                width: 100%;
+                align-content: center;
+                align-items: center;
+                text-align: center;
+
+                h1 {
+                    font-size: 18px;
+
+                }
+                span{
+                    font-size: 18px;
+                }
+
+                .btn-main {
+                    width: 250px;
+                    font-size: 12px;
+                }
+            }
+
+        }
+    }
+}
+    
+
+    

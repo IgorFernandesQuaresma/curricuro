@@ -1,0 +1,160 @@
+@use '../abstract/variaveis';
+
+.experiencias {
+    width: 1050px;
+    
+    h1 {
+        color: variaveis.$cor-quintenaria-branco;
+        font-family: variaveis.$ft-titulos;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    .experiencias__ul {
+        width: 1050px;
+        
+    }
+
+    .experiencias__div {
+        border: 1px solid variaveis.$cor-quintenaria-branco;  
+        border-radius: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+        .experiencias__btn__bloco {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+
+        h2 {
+            color: variaveis.$cor-quintenaria-branco;
+            font-family: variaveis.$ft-titulos;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        p {
+            color: variaveis.$cor-quintenaria-branco;
+            font-family: variaveis.$ft-textos;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .btn-main {
+
+            background-color: transparent; 
+            color: variaveis.$cor-secundaria-rosa; 
+            border: 2px solid variaveis.$cor-secundaria-rosa; 
+            padding: 10px 20px; 
+            font-size: 18px;
+            font-weight: 400;
+            font-family: variaveis.$ft-textos;
+            border-radius: 8px;
+            width: 200px;
+           
+            cursor: pointer;
+        }
+
+        .btn-main:hover {
+
+            background-color: transparent; 
+            color: variaveis.$cor-quintenaria-branco; 
+            border: 2px solid variaveis.$cor-quintenaria-branco
+        }
+    }
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 700px) {
+
+    .experiencias {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: 15px;
+            padding: 15px;
+        }
+
+        .experiencias__ul {
+            width: 100%;
+            padding: 10px;
+           
+        }
+
+        .experiencias__ul__li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .experiencias__div {
+            width: 85%;
+            h2 {
+                font-size: 12px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1150px) {
+
+    .experiencias {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .experiencias__btn__bloco {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        .experiencias__ul {
+            width: 100%;
+            padding: 10px;
+           
+        }
+
+        .experiencias__ul__li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .experiencias__div {
+
+            width: 85%;
+            h2 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 13px;
+            }
+
+            .experiencias__btn__bloco {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap:20px;
+            }
+        } 
+
+    }
+
+}
