@@ -1,9 +1,10 @@
 let ulExperiencias = document.querySelector('.experiencias__ul')
 let divCursos = document.querySelector('.formacao__container')
 
-console.log(ulExperiencias , divCursos)
+
 
 let arrExp = [
+    
     {
         cargo: "Web Designer Jr",
         empresa: "Agencia V4 - Company/ Cruz e Souza ",
@@ -58,8 +59,9 @@ let arrCursos = [
 
 ]
 
+let experienciasAtualizadas = JSON.parse(localStorage.getItem('experienciasAtualizadas')) || [];
 
-function criarLiExperiencias(cargo, empresa, descricao, ) {
+function criarLiExperiencias(cargo, empresa, descricao, index) {
 
     const liExperiencias = document.createElement("li");
     liExperiencias.classList.add("experiencias__ul__li");
@@ -74,7 +76,7 @@ function criarLiExperiencias(cargo, empresa, descricao, ) {
 
     const h2Empresa = document.createElement("h2");
     h2Empresa.classList.add("experiencias__empresa");
-    h2Empresa.textContent = `Cargo: ${empresa}`;
+    h2Empresa.textContent = `Empresa: ${empresa}`;
 
     const pDescricao = document.createElement("p");
     pDescricao.classList.add("experiencias__descricao");
@@ -90,10 +92,47 @@ function criarLiExperiencias(cargo, empresa, descricao, ) {
     btnEditar.classList.add("btn-main");
     btnEditar.textContent = "Editar";
 
+    btnEditar.onclick = () => {
+        const novoCargo = prompt('Insira o cargo') 
+        
+        const novaEmpresa = prompt('Insira a empresa') 
+     
+        const novaDescricao = prompt('Descreva o que você fazia') 
+       
+
+        const experienciasEditadas = {
+            cargo: novoCargo,
+            empresa: novaEmpresa,
+            descricao: novaDescricao
+        };
+
+       
+        arrExp[index] = experienciasEditadas;
+        experienciasAtualizadas = [...arrExp]
+
+
+        h2Cargo.textContent = `Cargo: ${novoCargo}`;
+        h2Empresa.textContent = `Empresa: ${novaEmpresa}`;
+        pDescricao.textContent = `Cargo: ${novaDescricao}`;
+
+    
+        atualizarLocalStorage();
+
+    }
+
     const btnRemover = document.createElement("button");
     btnRemover.setAttribute("id", "btn-remover__exp");
     btnRemover.classList.add("btn-main");
     btnRemover.textContent = "Remover";
+
+    btnRemover.onclick = () => {
+        liExperiencias.remove();
+        arrExp.splice(index, 1);
+        experienciasAtualizadas = [...arrExp]
+        atualizarLocalStorage();
+        
+        
+    } 
 
 // Adicionando os elementos criados à estrutura DOM
     divBtnBloco.appendChild(btnEditar);
@@ -107,16 +146,21 @@ function criarLiExperiencias(cargo, empresa, descricao, ) {
     liExperiencias.appendChild(divBlocoTexto);
 
 // Adicionando a estrutura criada ao elemento desejado no DOM (por exemplo, a lista <ul>)
-    ulExperiencias.appendChild(liExperiencias);
-
-
-    
+    ulExperiencias.appendChild(liExperiencias); 
 }
 
-arrExp.forEach(exp => {
-    criarLiExperiencias(exp.cargo, exp.empresa, exp.descricao);
-});
 
+
+if (experienciasAtualizadas.length > 0) {
+    experienciasAtualizadas.forEach((exp, index) => {
+        criarLiExperiencias(exp.cargo, exp.empresa, exp.descricao, index);
+    });
+} else {
+    arrExp.forEach((exp, index) => {
+        criarLiExperiencias(exp.cargo, exp.empresa, exp.descricao, index);
+    });
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 function criarLiCursos(curso, escola, termino, descricao) {
 
     const liCurso = document.createElement("li");
@@ -150,4 +194,10 @@ arrCursos.forEach(curso => {
     criarLiCursos(curso.curso, curso.escola, curso.termino, curso.descricao);
 });
 
+
+function atualizarLocalStorage() {
+
+    localStorage.setItem('experienciasAtualizadas', JSON.stringify(experienciasAtualizadas))  
+    
+}
 

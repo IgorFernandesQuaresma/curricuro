@@ -115,21 +115,28 @@ header #home .textos-home span {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
 }
-header #home .textos-home .btn-main {
-  background-color: transparent;
-  color: #ff00ff;
-  border: 2px solid #ff00ff;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-  border-radius: 8px;
-  cursor: pointer;
+header #home .textos-home .divIconHome {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
-header #home .textos-home .btn-main:hover {
-  background-color: transparent;
-  color: #FAFAFA;
-  border: 2px solid #FAFAFA;
+header #home .textos-home .divIconHome .iconRedeSocialAncora {
+  background-color: #3b3b3b;
+  padding: 5px;
+  border-radius: 60px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header #home .textos-home .divIconHome .iconRedeSocialAncora:hover {
+  background-color: #1a1a1a;
+}
+header #home .textos-home .divIconHome .iconRedeSocialImg {
+  width: 40px;
+  height: 40px;
 }
 @media screen and (min-width: 700px) and (max-width: 1100px) {
   header #home {
@@ -145,10 +152,6 @@ header #home .textos-home .btn-main:hover {
   }
   header #home .textos-home span {
     font-size: 25px;
-  }
-  header #home .textos-home .btn-main {
-    width: 300px;
-    font-size: 15px;
   }
 }
 @media screen and (min-width: 375px) and (max-width: 700px) {
@@ -166,10 +169,6 @@ header #home .textos-home .btn-main:hover {
   }
   header #home .textos-home span {
     font-size: 18px;
-  }
-  header #home .textos-home .btn-main {
-    width: 250px;
-    font-size: 12px;
   }
 }
 

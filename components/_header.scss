@@ -115,25 +115,34 @@ header {
                 font-weight: 900;
             }
             
-            .btn-main {
+            .divIconHome {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
 
-                background-color: transparent; 
-                color: variaveis.$cor-secundaria-rosa; 
-                border: 2px solid variaveis.$cor-secundaria-rosa; 
-                padding: 10px 20px; 
-                font-size: 18px;
-                font-weight: 400;
-                font-family: variaveis.$ft-textos;
-                border-radius: 8px;
-                cursor: pointer;
+                .iconRedeSocialAncora {
+                    background-color: variaveis.$cor-sextenaria-cinzaClaro;
+                    padding: 5px;
+                    border-radius: 60px;
+                    width: 70px;
+                    height: 70px;
+                    display: flex;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .iconRedeSocialAncora:hover {
+                    background-color: variaveis.$cor-quartenaria-cinza;
+                }
+
+
+                .iconRedeSocialImg {
+                    width: 40px;
+                    height: 40px;
+                }
             }
-
-            .btn-main:hover {
-
-                background-color: transparent; 
-                color: variaveis.$cor-quintenaria-branco; 
-                border: 2px solid variaveis.$cor-quintenaria-branco
-            }
+            
         }
     }
 
@@ -155,10 +164,7 @@ header {
                     font-size: 25px;
                 }
 
-                .btn-main {
-                    width: 300px;
-                    font-size: 15px;
-                }
+                
             }
 
         }
@@ -183,10 +189,6 @@ header {
                     font-size: 18px;
                 }
 
-                .btn-main {
-                    width: 250px;
-                    font-size: 12px;
-                }
             }
 
         }
